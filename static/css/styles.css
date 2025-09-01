@@ -1,0 +1,55 @@
+/* Body with GIF background */
+body {
+    font-family: Arial, sans-serif;
+    background: url(https://img95.lovepik.com/photo/40108/1516.gif_wh860.gif) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slide-in animation from top */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container {
+    background: rgba(150, 246, 188, 0.7); /* slightly transparent */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    animation: slideIn 1s ease-out forwards; /* slide-in effect */
+}
+
+/* Jump animation for buttons */
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: green;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    animation: jump 1s infinite;
+    transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+    background: darkgreen;
+    transform: scale(1.1);
+}

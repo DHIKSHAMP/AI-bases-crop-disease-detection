@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>{{ result }}</h2>
+        <img src="{{ image_url }}" alt="Uploaded Image" width="300"><br><br>
+        
+        <h3>Crop Type: {{ crop_type }}</h3>
+        <p><b>Description:</b> {{ description }}</p>
+        <p><b>Causes:</b> {{ causes }}</p>
+        <p><b>Prevention:</b> {{ prevention }}</p>
+        
+        <br>
+        <a href="/"><button>Upload Another Image</button></a>
+    </div>
+</body>
+
+</html>
